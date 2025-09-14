@@ -1,9 +1,10 @@
 import pygame
 from pygame.locals import QUIT
 
-pygame.init()
-# screen = pygame.display.set_mode(size=(500, 200), flags=pygame.RESIZABLE, depth=32)
-screen = pygame.display.set_mode(size=(500, 200), flags=pygame.FULLSCREEN, depth=32)
+success_module_cnt, failure_module_cnt = pygame.init()
+print(f"初始化成功模块数：{success_module_cnt}, 失败模块数：{failure_module_cnt}")
+screen = pygame.display.set_mode(size=(500, 200), flags=pygame.RESIZABLE, depth=32)
+# screen = pygame.display.set_mode(size=(500, 200), flags=pygame.FULLSCREEN, depth=32)
 
 font = pygame.font.SysFont(name=None, size=60)
 mingri = font.render('Hello, Pygame World!', True, (255, 255, 255))
